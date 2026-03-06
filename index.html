@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hướng dẫn đăng ký xe – Công an phường Ngũ Hành Sơn</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Roboto', sans-serif; }
+
+    /* Responsive video wrapper – maintains 16:9 */
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: 0;
+    }
+
+    /* Pulsing badge */
+    @keyframes pulse-ring {
+      0%   { box-shadow: 0 0 0 0   rgba(220,38,38,.5); }
+      70%  { box-shadow: 0 0 0 8px rgba(220,38,38,0);  }
+      100% { box-shadow: 0 0 0 0   rgba(220,38,38,0);  }
+    }
+    .pulse { animation: pulse-ring 2s infinite; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- ══════════════════════ HEADER ══════════════════════ -->
+  <header class="bg-[#1a2d5a] shadow-md">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center gap-4">
+      <!-- Logo -->
+      <div class="shrink-0">
+        <img src="imgs/logo.webp" alt="Logo Công an phường Ngũ Hành Sơn"
+             class="h-12 w-auto object-contain" />
+      </div>
+      <!-- Title text -->
+      <div>
+        <div class="text-yellow-400 font-bold text-sm md:text-base uppercase tracking-wide leading-tight">
+          Công an phường Ngũ Hành Sơn
+        </div>
+        <div class="text-white/70 text-xs font-light tracking-wide">
+          Thành phố Đà Nẵng
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══════════════════════ BANNER ══════════════════════ -->
+  <section class="bg-[#1a2d5a] pb-10 px-4">
+    <div class="max-w-4xl mx-auto text-center pt-8 pb-6">
+
+      <div class="w-16 h-1 bg-red-500 mx-auto mb-6 rounded-full"></div>
+
+      <h1 class="text-white font-bold text-xl md:text-2xl lg:text-3xl uppercase leading-snug mb-4">
+        Hướng dẫn thực hiện thủ tục<br class="hidden md:block" />
+        <span class="text-yellow-400">Đăng ký xe</span>
+        trên Cổng Dịch vụ công<br class="hidden md:block" />
+        Bộ Công An
+      </h1>
+
+      <div class="w-16 h-1 bg-red-500 mx-auto mt-4 mb-8 rounded-full"></div>
+
+      <!-- Notice box -->
+      <div class="inline-flex items-start gap-3 bg-white/10 border border-white/20
+                  rounded-lg px-5 py-4 text-left max-w-2xl">
+        <svg class="w-5 h-5 text-yellow-400 shrink-0 mt-0.5" fill="none"
+             stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002
+               6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388
+               6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3
+               0 11-6 0v-1m6 0H9"/>
+        </svg>
+        <p class="text-white/90 text-sm md:text-base font-light leading-relaxed">
+          Công dân vui lòng xem hướng dẫn
+          <strong class="text-yellow-400 font-medium">loại thủ tục đang cần thực hiện</strong>
+          qua video bên dưới trước khi tiến hành đăng ký.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Wave divider -->
+  <div class="bg-[#1a2d5a]">
+    <svg viewBox="0 0 1440 48" xmlns="http://www.w3.org/2000/svg"
+         preserveAspectRatio="none" class="w-full h-8 md:h-12 block">
+      <path d="M0,48 C360,0 1080,0 1440,48 L1440,48 L0,48 Z" fill="#f9fafb"/>
+    </svg>
+  </div>
+
+  <!-- ══════════════════════ VIDEOS ══════════════════════ -->
+  <main class="bg-gray-50 px-4 py-10 md:py-14">
+    <div class="max-w-5xl mx-auto">
+
+      <!-- Section label -->
+      <div class="flex items-center gap-3 mb-8">
+        <div class="w-1 h-7 bg-red-600 rounded-full"></div>
+        <h2 class="text-lg md:text-xl font-semibold text-[#1a2d5a] uppercase tracking-wide">
+          Video hướng dẫn
+        </h2>
+      </div>
+
+      <!-- ══ Video grid ══ -->
+      <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+
+        <!-- ─── Video 1 ─── -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden
+                    hover:shadow-md transition-shadow duration-200 flex flex-col">
+
+          <!-- Badge bar -->
+          <div class="bg-[#1a2d5a] px-4 py-2 flex items-center gap-2">
+            <span class="bg-red-600 pulse text-white text-xs font-bold px-2 py-0.5 rounded">
+              Video 1
+            </span>
+            <span class="text-white/70 text-xs font-light">Nhấn vào ảnh để xem</span>
+          </div>
+
+          <!-- Video embed -->
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/QoBWGQt8ChA?si=POFQXP5lg5tbvxt5"
+              title="Hướng dẫn Đăng ký, bấm BIỂN SỐ XE tại nhà mới nhất"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <!-- Content -->
+          <div class="p-4 flex flex-col flex-1">
+            <p class="text-sm font-semibold text-[#1a2d5a] leading-snug mb-2">
+              Hướng dẫn Đăng ký, bấm BIỂN SỐ XE tại nhà mới nhất
+            </p>
+            <ul class="text-xs text-gray-600 font-light leading-relaxed space-y-1 flex-1">
+              <li class="flex gap-1.5"><span class="text-red-500 font-bold shrink-0">›</span>Chuẩn bị hồ sơ: chụp ảnh xe, phiếu kiểm tra xuất xưởng</li>
+              <li class="flex gap-1.5"><span class="text-red-500 font-bold shrink-0">›</span>Nộp hồ sơ online qua Cổng dịch vụ công (tài khoản VNeID mức 2)</li>
+              <li class="flex gap-1.5"><span class="text-red-500 font-bold shrink-0">›</span>Khai báo thông tin, đính kèm ảnh, nhập mã phí trước bạ</li>
+              <li class="flex gap-1.5"><span class="text-red-500 font-bold shrink-0">›</span>Bấm biển mới hoặc biển định danh đang sở hữu</li>
+              <li class="flex gap-1.5"><span class="text-red-500 font-bold shrink-0">›</span>Thanh toán qua mã QR &amp; nhận kết quả tại nhà hoặc trực tiếp</li>
+            </ul>
+            <a href="https://www.youtube.com/watch?v=QoBWGQt8ChA"
+               target="_blank" rel="noopener noreferrer"
+               class="mt-4 inline-flex items-center justify-center gap-2 w-full
+                      bg-red-600 hover:bg-red-700 text-white text-xs font-medium
+                      py-2 px-3 rounded-lg transition-colors">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.97C18.88 4 12 4 12
+                  4s-6.88 0-8.59.45A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29
+                  29 0 00.46 5.58 2.78 2.78 0 001.95 1.97C5.12 20 12 20 12
+                  20s6.88 0 8.59-.45a2.78 2.78 0 001.95-1.97A29 29 0 0023
+                  12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/>
+              </svg>
+              Xem trên YouTube
+            </a>
+          </div>
+        </div>
+
+        <!-- ─── Video 2 ─── -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden
+                    hover:shadow-md transition-shadow duration-200 flex flex-col">
+
+          <div class="bg-[#1a2d5a] px-4 py-2 flex items-center gap-2">
+            <span class="bg-red-600 pulse text-white text-xs font-bold px-2 py-0.5 rounded">
+              Video 2
+            </span>
+            <span class="text-white/70 text-xs font-light">Nhấn vào ảnh để xem</span>
+          </div>
+
+          <!-- Video embed -->
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/kAU7PEc6JRs?si=QUCNAmK5b8Weg2Oi"
+              title="Hướng dẫn ĐĂNG KÝ XE trúng ĐẤU GIÁ online"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <div class="p-4 flex flex-col flex-1">
+            <p class="text-sm font-semibold text-[#1a2d5a] leading-snug mb-2">
+              Hướng dẫn ĐĂNG KÝ XE trúng ĐẤU GIÁ online
+            </p>
+            <ul class="text-xs text-gray-600 font-light leading-relaxed space-y-1 flex-1">
+              <li class="flex gap-1.5"><span class="text-red-500 font-bold shrink-0">›</span>Chuẩn bị ảnh xe, chứng từ nguồn gốc và quyết định xác nhận biển trúng đấu giá</li>
+              <li class="flex gap-1.5"><span class="text-red-500 font-bold shrink-0">›</span>Đăng nhập Cổng dịch vụ công → "Đăng ký xe lần đầu trực tuyến toàn trình"</li>
+              <li class="flex gap-1.5"><span class="text-red-500 font-bold shrink-0">›</span>Nhập biển số trúng đấu giá và số giấy xác nhận (bước quan trọng để hệ thống đối soát)</li>
+              <li class="flex gap-1.5"><span class="text-red-500 font-bold shrink-0">›</span>Thanh toán lệ phí online &amp; chọn hình thức nhận kết quả</li>
+            </ul>
+            <a href="https://www.youtube.com/watch?v=kAU7PEc6JRs"
+               target="_blank" rel="noopener noreferrer"
+               class="mt-4 inline-flex items-center justify-center gap-2 w-full
+                      bg-red-600 hover:bg-red-700 text-white text-xs font-medium
+                      py-2 px-3 rounded-lg transition-colors">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.97C18.88 4 12 4 12
+                  4s-6.88 0-8.59.45A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29
+                  29 0 00.46 5.58 2.78 2.78 0 001.95 1.97C5.12 20 12 20 12
+                  20s6.88 0 8.59-.45a2.78 2.78 0 001.95-1.97A29 29 0 0023
+                  12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/>
+              </svg>
+              Xem trên YouTube
+            </a>
+          </div>
+        </div>
+
+        <!-- ─── Video 3 ─── -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden
+                    hover:shadow-md transition-shadow duration-200 flex flex-col">
+
+          <div class="bg-[#1a2d5a] px-4 py-2 flex items-center gap-2">
+            <span class="bg-red-600 pulse text-white text-xs font-bold px-2 py-0.5 rounded">
+              Video 3
+            </span>
+            <span class="text-white/70 text-xs font-light">Nhấn vào ảnh để xem</span>
+          </div>
+
+          <!-- Video embed -->
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/M971E__yXFE?si=-IBCaR7O8Qr5P0si"
+              title="Hướng dẫn đăng ký, sử dụng VNETRAFFIC mới nhất"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <div class="p-4 flex flex-col flex-1">
+            <p class="text-sm font-semibold text-[#1a2d5a] leading-snug mb-2">
+              Hướng dẫn đăng ký, sử dụng VNETRAFFIC mới nhất
+            </p>
+            <ul class="text-xs text-gray-600 font-light leading-relaxed space-y-1 flex-1">
+              <li class="flex gap-1.5"><span class="text-red-500 font-bold shrink-0">›</span>Đăng ký tài khoản qua quét QR căn cước &amp; thiết lập Passcode bảo mật</li>
+              <li class="flex gap-1.5"><span class="text-red-500 font-bold shrink-0">›</span>Ví giấy tờ: lưu QR đăng ký xe, giấy phép lái xe</li>
+              <li class="flex gap-1.5"><span class="text-red-500 font-bold shrink-0">›</span>Tra cứu phạt nguội, phản ánh vi phạm giao thông bằng ảnh/video</li>
+              <li class="flex gap-1.5"><span class="text-red-500 font-bold shrink-0">›</span>Quản lý phương tiện: vi phạm, đăng kiểm, bảo hiểm, tai nạn</li>
+              <li class="flex gap-1.5"><span class="text-red-500 font-bold shrink-0">›</span>Tiện ích: camera giao thông, SOS cứu hộ, theo dõi đấu giá biển số</li>
+            </ul>
+            <a href="https://www.youtube.com/watch?v=M971E__yXFE"
+               target="_blank" rel="noopener noreferrer"
+               class="mt-4 inline-flex items-center justify-center gap-2 w-full
+                      bg-red-600 hover:bg-red-700 text-white text-xs font-medium
+                      py-2 px-3 rounded-lg transition-colors">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.97C18.88 4 12 4 12
+                  4s-6.88 0-8.59.45A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29
+                  29 0 00.46 5.58 2.78 2.78 0 001.95 1.97C5.12 20 12 20 12
+                  20s6.88 0 8.59-.45a2.78 2.78 0 001.95-1.97A29 29 0 0023
+                  12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/>
+              </svg>
+              Xem trên YouTube
+            </a>
+          </div>
+        </div>
+
+      </div><!-- /grid -->
+
+      <!-- Helper note -->
+      <div class="mt-10 bg-blue-50 border border-blue-200 rounded-lg px-5 py-4
+                  flex items-start gap-3">
+        <svg class="w-5 h-5 text-blue-500 shrink-0 mt-0.5" fill="none"
+             stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+        <p class="text-sm text-blue-800 font-light leading-relaxed">
+          Nếu gặp khó khăn trong quá trình thực hiện thủ tục, công dân vui lòng liên hệ
+          trực tiếp tại <strong class="font-medium">Công an phường Ngũ Hành Sơn</strong>
+          để được hỗ trợ và hướng dẫn thêm.
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ══════════════════════ FOOTER ══════════════════════ -->
+  <footer class="bg-[#1a2d5a] text-white/70 py-6 px-4 mt-4">
+    <div class="max-w-5xl mx-auto text-center text-xs font-light leading-relaxed space-y-1">
+      <p class="text-white font-medium text-sm">
+        CÔNG AN PHƯỜNG NGŨ HÀNH SƠN – THÀNH PHỐ ĐÀ NẴNG
+      </p>
+      <p>Hướng dẫn thực hiện thủ tục đăng ký xe trên Cổng Dịch vụ công Bộ Công An</p>
+      <p class="pt-2 border-t border-white/10 mt-3">
+        © 2026 Công an phường Ngũ Hành Sơn, TP. Đà Nẵng.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
