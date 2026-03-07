@@ -1,3 +1,5 @@
+![Banner](./public/imgs/banner.png)
+
 # Thủ tục Đăng ký Xe – Công an phường Ngũ Hành Sơn
 
 Trang thông tin hướng dẫn các thủ tục đăng ký xe trực tuyến dành cho người dân, do **Công an phường Ngũ Hành Sơn, TP. Đà Nẵng** cung cấp.
