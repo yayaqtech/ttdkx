@@ -64,6 +64,10 @@ const ogImage = new URL('imgs/banner.png', siteUrl).href;
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script>
       if (window.netlifyIdentity) {
+        if (window.location.hash.includes("recovery_token")) {
+          window.location.href = "/admin/" + window.location.hash;
+        }
+
         window.netlifyIdentity.on("init", user => {
           if (!user) {
             window.netlifyIdentity.on("login", () => {
