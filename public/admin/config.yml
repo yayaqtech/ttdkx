@@ -1,0 +1,64 @@
+# ================================================================
+# Decap CMS – Cấu hình
+# ================================================================
+#
+# PHÁT TRIỂN LOCAL:
+#   1. Chạy proxy: npx decap-server
+#   2. Chạy Astro:  npm run dev
+#   3. Mở:          http://localhost:4321/ttdkx/admin/
+#
+# PRODUCTION (GitHub Pages):
+#   Cần OAuth proxy. Tạo GitHub OAuth App rồi điền base_url bên dưới.
+#   Hướng dẫn: https://decapcms.org/docs/github-backend/
+# ================================================================
+
+local_backend: true
+
+backend:
+  name: github
+  repo: yayaqtech/ttdkx
+  branch: main
+  # base_url: https://your-oauth-proxy.netlify.app  # bỏ comment khi deploy production
+
+media_folder: public/imgs
+public_folder: /ttdkx/imgs
+
+collections:
+  # ── Thông tin trang (SEO / metadata) ──────────────────────────
+  - name: site_meta
+    label: Thông tin trang
+    files:
+      - name: meta
+        label: SEO & Metadata
+        file: src/data/meta.json
+        format: json
+        fields:
+          - { label: "Tiêu đề trang", name: title, widget: string }
+          - { label: "Mô tả trang", name: description, widget: text }
+          - { label: "Từ khóa (keywords)", name: keywords, widget: string }
+          - { label: "OG Title", name: ogTitle, widget: string }
+          - { label: "OG Description", name: ogDescription, widget: text }
+          - { label: "OG Locale", name: ogLocale, widget: hidden, default: "vi_VN" }
+          - { label: "OG Image Alt", name: ogImageAlt, widget: string }
+          - { label: "OG Site Name", name: ogSiteName, widget: string }
+          - { label: "Twitter Card", name: twitterCard, widget: hidden, default: "summary_large_image" }
+          - { label: "Twitter Title", name: twitterTitle, widget: string }
+          - { label: "Twitter Description", name: twitterDescription, widget: text }
+
+  # ── Danh sách video hướng dẫn ─────────────────────────────────
+  - name: videos
+    label: Video hướng dẫn
+    files:
+      - name: videos
+        label: Danh sách video
+        file: src/data/videos.json
+        format: json
+        fields:
+          - label: Danh sách video
+            name: items
+            widget: list
+            fields:
+              - { label: "Tiêu đề video", name: title, widget: string }
+              - { label: "URL nhúng (embed)", name: embedUrl, widget: string, hint: "Ví dụ: https://www.youtube.com/embed/VIDEO_ID" }
+              - { label: "URL xem YouTube", name: watchUrl, widget: string, hint: "Ví dụ: https://www.youtube.com/watch?v=VIDEO_ID" }
+              - { label: "Mô tả", name: description, widget: text }
