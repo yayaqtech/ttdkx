@@ -1,0 +1,126 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import VideoCard from '../components/VideoCard.astro';
+import { videos } from '../data/videos';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout>
+  <!-- BANNER -->
+  <section class="bg-[#1a2d5a]">
+    <img
+      src={`${base}imgs/banner.png`}
+      alt="Công an phường Ngũ Hành Sơn – Hướng dẫn thủ tục đăng ký xe"
+      class="w-full h-auto block"
+    />
+  </section>
+
+  <!-- Instruction notice -->
+  <div class="bg-[#1a2d5a] px-4 pt-5 pb-8">
+    <div
+      class="max-w-2xl mx-auto flex items-start gap-3 bg-white/10
+             border border-white/20 rounded-lg px-5 py-4"
+    >
+      <svg
+        class="w-5 h-5 text-yellow-400 shrink-0 mt-0.5"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002
+             6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388
+             6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3
+             0 11-6 0v-1m6 0H9"
+        />
+      </svg>
+      <p class="text-white/90 text-sm md:text-base font-light leading-relaxed">
+        Công dân vui lòng xem hướng dẫn
+        <strong class="text-yellow-400 font-medium">loại thủ tục đang cần thực hiện</strong>
+        qua video bên dưới trước khi tiến hành đăng ký.
+      </p>
+    </div>
+  </div>
+
+  <!-- Curved bottom edge -->
+  <div class="bg-[#1a2d5a]">
+    <svg
+      viewBox="0 -1 1440 71"
+      xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="none"
+      class="w-full block"
+    >
+      <path d="M0,-1 C360,70 1080,70 1440,-1 L1440,70 L0,70 Z" fill="#f9fafb" />
+    </svg>
+  </div>
+
+  <!-- VIDEOS -->
+  <main class="bg-gray-50 px-4 py-10 md:py-14">
+    <div class="max-w-5xl mx-auto">
+
+      <!-- Section label -->
+      <div class="flex items-center gap-3 mb-8">
+        <div class="w-1 h-7 bg-red-600 rounded-full"></div>
+        <h2 class="text-lg md:text-xl font-semibold text-[#1a2d5a] uppercase tracking-wide">
+          Video hướng dẫn
+        </h2>
+      </div>
+
+      <!-- Video grid -->
+      <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+        {videos.map((video, i) => (
+          <VideoCard
+            index={i + 1}
+            title={video.title}
+            embedUrl={video.embedUrl}
+            watchUrl={video.watchUrl}
+            description={video.description}
+          />
+        ))}
+      </div>
+
+      <!-- Helper note -->
+      <div
+        class="mt-10 bg-blue-50 border border-blue-200 rounded-lg px-5 py-4
+               flex items-start gap-3"
+      >
+        <svg
+          class="w-5 h-5 text-blue-500 shrink-0 mt-0.5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+        <p class="text-sm text-blue-800 font-light leading-relaxed">
+          Nếu gặp khó khăn trong quá trình thực hiện thủ tục, công dân vui lòng liên hệ
+          trực tiếp tại <strong class="font-medium">Công an phường Ngũ Hành Sơn</strong>
+          để được hỗ trợ và hướng dẫn thêm.
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#1a2d5a] text-white/70 py-6 px-4 mt-4">
+    <div class="max-w-5xl mx-auto text-center text-xs font-light leading-relaxed space-y-1">
+      <p class="text-white font-medium text-sm">
+        CÔNG AN PHƯỜNG NGŨ HÀNH SƠN – THÀNH PHỐ ĐÀ NẴNG
+      </p>
+      <p>Hướng dẫn thực hiện thủ tục đăng ký xe trên Cổng Dịch vụ công Bộ Công An</p>
+      <p class="pt-2 border-t border-white/10 mt-3">
+        © 2026 Công an phường Ngũ Hành Sơn, TP. Đà Nẵng.
+      </p>
+    </div>
+  </footer>
+</BaseLayout>
