@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { siteMeta } from '../data/meta';
 
 interface Props {
   title?: string;
@@ -7,8 +8,8 @@ interface Props {
 }
 
 const {
-  title = "Hướng dẫn thủ tục đăng ký xe – Công an phường Ngũ Hành Sơn",
-  description = "Công an phường Ngũ Hành Sơn – TP. Đà Nẵng hướng dẫn các thủ tục đăng ký xe trực tuyến: bấm biển số, sang tên xe, cấp lại giấy đăng ký, khai báo xe đã bán và sử dụng ứng dụng VNETRAFFIC trên Cổng Dịch vụ công Bộ Công An.",
+  title = siteMeta.title,
+  description = siteMeta.description,
 } = Astro.props;
 
 const base = import.meta.env.BASE_URL;
@@ -25,28 +26,23 @@ const ogImage = new URL('imgs/banner.png', siteUrl).href;
 
     <!-- SEO -->
     <meta name="description" content={description} />
+    <meta name="keywords" content={siteMeta.keywords} />
     <meta name="robots" content="index, follow" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:locale" content="vi_VN" />
-    <meta property="og:title" content="Hướng dẫn đăng ký xe – Công an phường Ngũ Hành Sơn" />
-    <meta
-      property="og:description"
-      content="Hướng dẫn các thủ tục đăng ký xe trực tuyến: bấm biển số tại nhà, sang tên xe, cấp lại giấy đăng ký, khai báo xe đã bán/cho tặng và sử dụng VNETRAFFIC. Xem video hướng dẫn chi tiết từ Công an phường Ngũ Hành Sơn, TP. Đà Nẵng."
-    />
+    <meta property="og:locale" content={siteMeta.ogLocale} />
+    <meta property="og:title" content={siteMeta.ogTitle} />
+    <meta property="og:description" content={siteMeta.ogDescription} />
     <meta property="og:url" content={siteUrl} />
     <meta property="og:image" content={ogImage} />
-    <meta property="og:image:alt" content="Hướng dẫn đăng ký xe – Công an phường Ngũ Hành Sơn" />
-    <meta property="og:site_name" content="Công an phường Ngũ Hành Sơn – TP. Đà Nẵng" />
+    <meta property="og:image:alt" content={siteMeta.ogImageAlt} />
+    <meta property="og:site_name" content={siteMeta.ogSiteName} />
 
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Hướng dẫn đăng ký xe – Công an phường Ngũ Hành Sơn" />
-    <meta
-      name="twitter:description"
-      content="Hướng dẫn các thủ tục đăng ký xe trực tuyến: bấm biển số tại nhà, sang tên xe, cấp lại giấy đăng ký, khai báo xe đã bán/cho tặng và sử dụng VNETRAFFIC. Xem video hướng dẫn chi tiết từ Công an phường Ngũ Hành Sơn, TP. Đà Nẵng."
-    />
+    <meta name="twitter:card" content={siteMeta.twitterCard} />
+    <meta name="twitter:title" content={siteMeta.twitterTitle} />
+    <meta name="twitter:description" content={siteMeta.twitterDescription} />
     <meta name="twitter:image" content={ogImage} />
 
     <!-- Favicon -->
