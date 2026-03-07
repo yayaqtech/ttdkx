@@ -11,15 +11,14 @@ const { index, title, embedUrl, watchUrl, description } = Astro.props;
 ---
 
 <div
-  class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden
-         hover:shadow-md transition-shadow duration-200 flex flex-col"
+  class="flex flex-col overflow-hidden rounded-xl border border-gray-100 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md"
 >
   <!-- Badge bar -->
-  <div class="bg-[#1a2d5a] px-4 py-2 flex items-center gap-2">
-    <span class="bg-red-600 pulse text-white text-xs font-bold px-2 py-0.5 rounded">
+  <div class="flex items-center gap-2 bg-[#1a2d5a] px-4 py-2">
+    <span class="pulse rounded bg-red-600 px-2 py-0.5 text-xs font-bold text-white">
       Video {index}
     </span>
-    <span class="text-white/70 text-xs font-light">Nhấn play để xem</span>
+    <span class="text-xs font-light text-white/70">Nhấn play để xem</span>
   </div>
 
   <!-- Video embed -->
@@ -30,34 +29,31 @@ const { index, title, embedUrl, watchUrl, description } = Astro.props;
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen
-    ></iframe>
+      allowfullscreen></iframe>
   </div>
 
   <!-- Content -->
-  <div class="p-4 flex flex-col flex-1">
-    <p class="text-sm font-semibold text-[#1a2d5a] leading-snug mb-2">
+  <div class="flex flex-1 flex-col p-4">
+    <p class="mb-2 text-sm font-semibold leading-snug text-[#1a2d5a]">
       {title}
     </p>
-    <p class="text-xs text-gray-600 font-light leading-relaxed flex-1">
+    <p class="flex-1 text-xs font-light leading-relaxed text-gray-600">
       {description}
     </p>
     <a
       href={watchUrl}
       target="_blank"
       rel="noopener noreferrer"
-      class="mt-4 inline-flex items-center justify-center gap-2 w-full
-             bg-red-600 hover:bg-red-700 text-white text-xs font-medium
-             py-2 px-3 rounded-lg transition-colors"
+      class="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-red-600 px-3 py-2 text-xs font-medium text-white transition-colors hover:bg-red-700"
     >
-      <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+      <svg class="h-4 w-4 fill-current" viewBox="0 0 24 24">
         <path
           d="M22.54 6.42a2.78 2.78 0 00-1.95-1.97C18.88 4 12 4 12
              4s-6.88 0-8.59.45A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29
              29 0 00.46 5.58 2.78 2.78 0 001.95 1.97C5.12 20 12 20 12
              20s6.88 0 8.59-.45a2.78 2.78 0 001.95-1.97A29 29 0 0023
              12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"
-        />
+        ></path>
       </svg>
       Xem trên YouTube
     </a>
