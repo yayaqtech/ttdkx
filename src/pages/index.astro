@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import VideoCard from '../components/VideoCard.astro';
 import { items as videos } from '../data/videos.json';
 
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 ---
 
 <BaseLayout>
