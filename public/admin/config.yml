@@ -7,18 +7,17 @@
 #   2. Chạy Astro:  npm run dev
 #   3. Mở:          http://localhost:4321/ttdkx/admin/
 #
-# PRODUCTION (GitHub Pages):
-#   Cần OAuth proxy. Tạo GitHub OAuth App rồi điền base_url bên dưới.
-#   Hướng dẫn: https://decapcms.org/docs/github-backend/
+# PRODUCTION (Netlify):
+#   Dùng Netlify Identity + Git Gateway.
+#   Bật tại: Site configuration → Identity → Enable Identity
+#            Identity → Services → Git Gateway → Enable Git Gateway
 # ================================================================
 
 local_backend: true
 
 backend:
-  name: github
-  repo: yayaqtech/ttdkx
+  name: git-gateway
   branch: main
-  base_url: https://ttdkx.netlify.app
 
 media_folder: public/imgs
 public_folder: /ttdkx/imgs
