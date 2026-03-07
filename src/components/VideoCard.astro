@@ -3,11 +3,10 @@ interface Props {
   index: number;
   title: string;
   embedUrl: string;
-  watchUrl: string;
   description: string;
 }
 
-const { index, title, embedUrl, watchUrl, description } = Astro.props;
+const { index, title, embedUrl, description } = Astro.props;
 ---
 
 <div
@@ -40,22 +39,5 @@ const { index, title, embedUrl, watchUrl, description } = Astro.props;
     <p class="flex-1 text-xs font-light leading-relaxed text-gray-600">
       {description}
     </p>
-    <a
-      href={watchUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      class="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-red-600 px-3 py-2 text-xs font-medium text-white transition-colors hover:bg-red-700"
-    >
-      <svg class="h-4 w-4 fill-current" viewBox="0 0 24 24">
-        <path
-          d="M22.54 6.42a2.78 2.78 0 00-1.95-1.97C18.88 4 12 4 12
-             4s-6.88 0-8.59.45A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29
-             29 0 00.46 5.58 2.78 2.78 0 001.95 1.97C5.12 20 12 20 12
-             20s6.88 0 8.59-.45a2.78 2.78 0 001.95-1.97A29 29 0 0023
-             12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"
-        ></path>
-      </svg>
-      Xem trên YouTube
-    </a>
   </div>
 </div>

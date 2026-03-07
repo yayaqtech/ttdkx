@@ -59,5 +59,4 @@ collections:
             fields:
               - { label: "Tiêu đề video", name: title, widget: string }
               - { label: "URL nhúng (embed)", name: embedUrl, widget: string, hint: "Ví dụ: https://www.youtube.com/embed/VIDEO_ID" }
-              - { label: "URL xem YouTube", name: watchUrl, widget: string, hint: "Ví dụ: https://www.youtube.com/watch?v=VIDEO_ID" }
               - { label: "Mô tả", name: description, widget: text }
