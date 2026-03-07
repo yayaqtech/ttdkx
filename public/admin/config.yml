@@ -18,7 +18,7 @@ backend:
   name: github
   repo: yayaqtech/ttdkx
   branch: main
-  # base_url: https://your-oauth-proxy.netlify.app  # bỏ comment khi deploy production
+  base_url: https://ttdkx.netlify.app
 
 media_folder: public/imgs
 public_folder: /ttdkx/imgs
